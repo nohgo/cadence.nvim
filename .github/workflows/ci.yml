@@ -1,0 +1,21 @@
+name: Compiler bridge tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        neovim: ['v0.11.5', 'v0.12.5']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Neovim
+        env:
+          NVIM_VERSION: ${{ matrix.neovim }}
+        run: |
+          curl -fL "https://github.com/neovim/neovim/releases/download/$NVIM_VERSION/nvim-linux-x86_64.tar.gz" -o /tmp/nvim.tar.gz
+          tar xzf /tmp/nvim.tar.gz -C /tmp
+          echo /tmp/nvim-linux-x86_64/bin >> "$GITHUB_PATH"
+      - name: Test parser and asynchronous editor integration
+        run: make test

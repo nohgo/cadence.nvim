@@ -1,0 +1,18 @@
+TOOL: xmvlog(64) 24.09: Started
+file: src/resistor.va
+  I(p,n) <+ V(p,n)/r
+                    |
+xmvlog: *E,EXPSMC (src/resistor.va,7|21): Missing statement terminator.
+    Add a terminator before the following declaration.
+  source_echo_should_not_be_in_message
+  |
+xmvlog(64): *W,TESTWARN (include/disciplines.vams,3|0): Synthetic header warning.
+(`include file: include/disciplines.vams line 3, file: src/resistor.va line 1)
+ncvlog: *F,DLCSYN (hdl.var,4): Synthetic configuration failure.
+xmvlog: *N,TESTNOTE: Synthetic global note.
+xrun: *E,TESTFAIL: Synthetic driver failure.
+xmvlog_p: *SE,SOFTERR (src/resistor.va,9|2): Synthetic soft error.
+xmvlog: *I,INFORMATION: Synthetic information.
+xmvlog: *Q,QUESTION: Synthetic question.
+    errors: 3, warnings: 1
+TOOL: xmvlog: Exiting

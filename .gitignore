@@ -1,0 +1,14 @@
+# Local editor and operating-system files.
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Local tooling, test output, and Cadence scratch files.
+/.luarocks/
+/.test-work/
+/.cadence-work/
+/coverage/
+/nvim.log
+
+# Diagnostic log fixtures should remain trackable; do not ignore all *.log files.
