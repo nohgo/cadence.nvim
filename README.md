@@ -159,13 +159,6 @@ expect a located compiler error. Restore it and save to clear that error. Repeat
 with a deliberate undeclared name to exercise a compiler semantic check.
 Record `xmvlog -version` and any required options when reporting a problem.
 
-**Real Cadence execution has not been verified on the development machine**:
-neither `xmvlog` nor `xrun` is installed. The command and parser are based on
-vendor documentation and public Cadence examples; see
-[research and sources](docs/RESEARCH.md). This checks compilation, not complete
-project elaboration, transient behavior, convergence, or hidden states. Missing
-dependencies and simulator-version differences can require project configuration.
-
 ## Development
 
 ```sh
